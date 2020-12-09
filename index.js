@@ -16,6 +16,9 @@ client.login(process.env.TOKEN)
 
 /* Setup Express Js */
 var express = require('express')
+const rateLimit = require("express-rate-limit");
+const limiter = rateLimit({windowMs: 2 * 60 * 1000, max: 90});
+app.use(limiter); // apply to all requests
 var app = express()
 /* Express Config */
 var listener = app.listen(process.env.PORT, () => {
