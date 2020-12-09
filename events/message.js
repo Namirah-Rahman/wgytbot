@@ -70,6 +70,12 @@ module.exports = (client, message) => {
         message.channel.send(`Pong! 🏓 ${message.author}`);
     } else if (command === "source") {
         message.channel.send("Waste Of Money isn't open-source but our base WgytBot is open-source! :partying_face: My source is available at https://github.com/wgyt735yt/Waste Of Money :)");
+    } else if (command === "christmas") {
+        message.channel.send(":santa:  Happy holidays, " + message.author);
+    } else if (command === "gtg") {
+        message.channel.send(message.author + " has to go!");
+    } else if (command === "got to go") {
+        message.channel.send(message.author + " has to go!");
     }else if(command==="status"){
 			fetch('https://dev.wasteof.money')
       .then(function(response) {
@@ -78,6 +84,8 @@ module.exports = (client, message) => {
       } else {
         message.channel.send(`:green_square:  ${response.status} Online`)
       }
-      })
+      } else {
+        message.channel.send("Sadly, that's not a command.");
+    })
 		}
 }
