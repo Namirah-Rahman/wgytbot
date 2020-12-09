@@ -76,16 +76,19 @@ module.exports = (client, message) => {
         message.channel.send(message.author + " has to go!");
     } else if (command === "got to go") {
         message.channel.send(message.author + " has to go!");
-    }else if(command==="status"){
-			fetch('https://dev.wasteof.money')
-      .then(function(response) {
-      if (response.status != "200") {
-        message.channel.send(`:red_square:  ${response.status} Offline`)
-      } else {
-        message.channel.send(`:green_square:  ${response.status} Online`)
-      }
-      } else {
+    } else if (command === "status") {
+				fetch('https://dev.wasteof.money')
+					.then(function(response) {
+        	if (response.status != "200") {
+            message.channel.send(`:x:
+  ${response.status} Offline`)
+            } else {
+            message.channel.send(`:white_check_mark:
+  ${response.status} Online`)
+          }
+          }
+				);
+		} else{
         message.channel.send("Sadly, that's not a command.");
-    })
-		}
+  }
 }
