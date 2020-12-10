@@ -88,6 +88,10 @@ module.exports = (client, message) => {
 				}else{
 				message.channel.send("Sadly, you can't do that.");
 				}
+			}else if(command==="funnyquote"){
+				var randomCase = require('random-case');
+				rndmzed = randomCase(args[0]);
+				message.channel.send(`'${rndmzed}' - <@${message.mentions.users.first()}>`)
 			}else if(command==="unban"){
 				if (member.roles.cache.some(role => role.name === 'MODS')) {
 				const id = args[0];
