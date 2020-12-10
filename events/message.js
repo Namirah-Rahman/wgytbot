@@ -84,7 +84,32 @@ module.exports = (client, message) => {
       } else {
         message.channel.send(`:green_square:  ${response.status} Online`)
       }
-      })}else {
+      })
+			}else if(command==="ban"){
+				const member = message.author.id();
+				if (member.roles.cache.some(role => role.name === 'MODS')) {				const user = message.mentions.users.first();
+				guild.members.ban(user);
+        message.channel.send("Banned!");
+				}else{
+				message.channel.send("Sadly, you can't do that.");
+				}
+			}else if(command==="unban"){
+				if (member.roles.cache.some(role => role.name === 'MODS')) {
+				const id = args[0];
+				guild.members.unban(id);
+        message.channel.send("UnBanned!");
+				}else{
+				message.channel.send("Sadly, you can't do that.");
+				}
+			}else if(command==="kick"){
+				if (member.roles.cache.some(role => role.name === 'MODS')) {
+				const member = message.mentions.members.first();
+				member.kick();
+        message.channel.send("Kicked!");
+				}else{
+				message.channel.send("Sadly, you can't do that.");
+				}
+			}else {
         message.channel.send("Sadly, that's not a command.");
     };
 }
