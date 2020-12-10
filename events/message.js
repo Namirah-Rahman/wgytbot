@@ -57,7 +57,7 @@ module.exports = (client, message) => {
     } else if (command === "source") {
         message.channel.send("WgytBot is open-source! :partying_face: My source is available at https://github.com/wgyt735yt/wgytbot :)");
     } else if (command === "christmas") {
-        message.channel.send(":santa:  Happy holidays, " + message.author);
+        message.channel.send(":santa:  Happy holidays, <@" + message.author + ">");
     } else if (command === "gtg") {
         message.channel.send("<@" + message.author + "> has to go!");
     } else if(command==="status"){
