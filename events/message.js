@@ -69,6 +69,15 @@ module.exports = (client, message) => {
         message.channel.send(`:green_square:  ${response.status} Online`)
       }
      })
+			}else if (command==="webstatus"){
+			fetch(args[0])
+      .then(function(response) {
+      if (response.status != "200") {
+        message.channel.send(`:red_square:  ${response.status} Offline`)
+      } else {
+        message.channel.send(`:green_square:  ${response.status} Online`)
+      }
+     })
 			}else if(command==="ban"){
 				const member = message.author.id();
 				if (member.roles.cache.some(role => role.name === 'MODS')) {				const user = message.mentions.users.first();
