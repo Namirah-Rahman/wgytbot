@@ -23,20 +23,6 @@ module.exports = (client, message) => {
         });
     } else if (command === 'prefix') {
         message.reply(`you can either ping me or use \`${prefix}\` as my prefix.`);
-    } else if (command === 'kick') {
-        const member = message.mentions.members.first()
-        if (!member) {
-            return message.reply(
-                `Who are you trying to kick? You must mention a user.`
-            )
-        }
-        if (!member.kickable) {
-            return message.reply(`I can't kick this user. Sorry!`)
-        }
-        return member
-            .kick()
-            .then(() => message.reply(`${member.user.tag} was kicked.`))
-            .catch((error) => message.reply(`Sorry, an error occured.`))
     } else if (command === 'help') {
         const helpembd = {
             "title": "WgytBot Help",
@@ -73,10 +59,8 @@ module.exports = (client, message) => {
     } else if (command === "christmas") {
         message.channel.send(":santa:  Happy holidays, " + message.author);
     } else if (command === "gtg") {
-        message.channel.send(message.author + " has to go!");
-    } else if (command === "got to go") {
-        message.channel.send(message.author + " has to go!");
-    }else if(command==="status"){
+        message.channel.send("<@" + message.author + "> has to go!");
+    } else if(command==="status"){
 			fetch('https://bot.wgyt.tk')
       .then(function(response) {
       if (response.status != "200") {
