@@ -60,7 +60,7 @@ module.exports = (client, message) => {
         message.channel.send(":santa:  Happy holidays, <@" + message.author + ">");
     } else if (command === "gtg") {
         message.channel.send("<@" + message.author + "> has to go!");
-    } else if(command==="status"){
+    } else if(command==="botstatus"){
 			fetch('https://bot.wgyt.tk')
       .then(function(response) {
       if (response.status != "200") {
