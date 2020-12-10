@@ -78,6 +78,8 @@ module.exports = (client, message) => {
         message.channel.send(`:green_square:  ${response.status} Online`)
       }
      })
+			}else if(command==="repeat"){
+				message.channel.send(`'${args[0]}' - <@${message.author}>`)
 			}else if(command==="ban"){
 				const member = message.author.id();
 				if (member.roles.cache.some(role => role.name === 'MODS')) {				const user = message.mentions.users.first();
