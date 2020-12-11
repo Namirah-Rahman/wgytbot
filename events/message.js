@@ -73,7 +73,7 @@ module.exports = (client, message) => {
 			fetch(args[0])
       .then(function(response) {
       if (response.status != "200") {
-        message.channel.send(`:red_square:  ${response.status} Offline`)
+        message.channel.send(`AAAAAAAAAAAAAA ${args[0]} IS DOWN WITH STATUS ${response.status}`)
       } else {
         message.channel.send(`:green_square:  ${response.status} Online`)
       }
