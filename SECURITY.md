@@ -8,7 +8,7 @@ currently being supported with security updates.
 | Version | Supported          |
 | ------- | ------------------ |
 | 2.0     | :white_check_mark: |
-| < Commit 2a4c418a6e488ec92db1dd37a9f65f4ceaaf4ef4  | :x:  |
+| < All code before [this](https://github.com/wgyt/wgytbot/tree/2a4c418a6e488ec92db1dd37a9f65f4ceaaf4ef4)  | :x:  |
 
 ## Reporting a Vulnerability
 
