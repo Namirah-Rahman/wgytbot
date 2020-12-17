@@ -4,8 +4,7 @@ module.exports = (client) => {
     client.user.setPresence({
         status: "online",  //You can show online, idle....
         game: {
-	    url:"https://josh-bot-staging.herokuapp.com/",
-            name: "commands. BETA VERSION. https://josh-bot-staging.herokuapp.com/",  //The message shown
+            name: "commands. BETA VERSION. https://wgytbot-1.williamhorning.repl.co",  //The message shown
             type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
         }
     });}
